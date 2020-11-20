@@ -35,7 +35,7 @@ describe('Errors Test', () => {
   });
 
   it('should create an instance of a SlackErrorHandler', () => {
-    const slackErrorHandler = new SlackErrorHandler('Slack', 'https://example.com', SLACK_ERROR_LOG);
+    const slackErrorHandler = new SlackErrorHandler(SLACK_ERROR_LOG);
     expect(slackErrorHandler).to.be.instanceOf(SlackErrorHandler);
     expect(() => {
       slackErrorHandler.throwError()
@@ -43,7 +43,7 @@ describe('Errors Test', () => {
   });
 
   it('should handle an Error', () => {
-    const errorHandler = new ErrorHandler('Console', 'https://example.com');
+    const errorHandler = new ErrorHandler();
     errorHandler.handleError('testError', 'This is a test', 'Test Error');
     expect(console.log).to.have.been.calledTwice;
   });
