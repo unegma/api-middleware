@@ -1,3 +1,5 @@
+THIS PACKAGE IS DEPRECIATED AND WILL BE REPLACED WITH @unegma/logger
+
 # Error Handler Utility
 
 * Console log version (basic logging)
